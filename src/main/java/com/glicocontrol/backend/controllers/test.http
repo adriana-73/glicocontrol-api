@@ -1,0 +1,21 @@
+### 1. Criar um usuário de teste
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "name": "Maria Silva",
+  "age": 35,
+  "weight": 68.5
+}
+
+### 2. Cadastrar uma medição de glicose (Substitua o userId se necessário)
+POST http://localhost:8080/api/measurements?userId=1
+Content-Type: application/json
+
+{
+  "glucoseValue": 142,
+  "mealContext": "POS_ALMOCO"
+}
+
+### 3. Consultar o histórico de medições do usuário 1
+GET http://localhost:8080/api/measurements/user/1
