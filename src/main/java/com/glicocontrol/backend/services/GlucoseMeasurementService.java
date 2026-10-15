@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class GlucoseMeasurementService {
@@ -41,5 +42,13 @@ public class GlucoseMeasurementService {
 
         double soma = medicoes.stream().mapToInt(GlucoseMeasurement::getGlucoseValue).sum();
         return (double) soma / medicoes.size();
+    }
+
+    public Optional<GlucoseMeasurement> buscarPorId(Long id) {
+        return repository.findById(id);
+    }
+
+    public void deletarMedicao(Long id) {
+        repository.deleteById(id);
     }
 }
