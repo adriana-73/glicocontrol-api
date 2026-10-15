@@ -37,7 +37,10 @@ public class GlucoseMeasurementController {
         // 2. Cria a entidade GlucoseMeasurement e preenche com os dados do DTO
         GlucoseMeasurement measurement = new GlucoseMeasurement();
         measurement.setUser(userOpt.get());
-        measurement.setGlucoseValue(requestDTO.getValue().intValue()); // Ajuste para o nome do método setter do valor na sua entity (ex: setValue ou setValor)
+
+        // Ajuste para o nome do método setter do valor na sua entity (ex: setValue ou setValor)
+        measurement.setGlucoseValue(requestDTO.getValue().intValue());
+
 
         // 3. Define a data/hora (se vier nula, usa o momento atual)
         if (requestDTO.getMeasurementDateTime() == null) {
@@ -45,6 +48,7 @@ public class GlucoseMeasurementController {
         } else {
             measurement.setMeasurementDateTime(requestDTO.getMeasurementDateTime());
         }
+
 
         // 4. Salva usando o service
         GlucoseMeasurement savedMeasurement = measurementService.salvarMedicao(measurement);
@@ -65,5 +69,43 @@ public class GlucoseMeasurementController {
     public ResponseEntity<Double> getAverageGlucose(@PathVariable("userId") Long userId) {
         double media = measurementService.calcularMediaGlicemica(userId);
         return ResponseEntity.ok(media);
+    }
+     //4. Endpoint para atualizar uma medição existente (PUT)
+    @PutMapping("/{id}")
+    public ResponseEntity<Object> updateMeasurement(@PathVariable Long id, @RequestBody GlucoseMeasurementRequestDTO requestDTO) {
+
+        Optional<GlucoseMeasurement> measurementOpt = measurementService.buscarPorId(id);
+        if (measurementOpt.isEmpty()) {
+            return ResponseEntity.badRequest().body("Medição não encontrada com o ID informado.");
+        }
+
+        GlucoseMeasurement measurement = measurementOpt.get();
+
+        if (requestDTO.getValue() != null) {
+            measurement.setGlucoseValue(requestDTO.getValue().intValue());
+        }
+
+        if (requestDTO.getMeasurementDateTime() != null) {
+            measurement.setMeasurementDateTime(requestDTO.getMeasurementDateTime());
+        }
+
+        GlucoseMeasurement updatedMeasurement = measurementService.salvarMedicao(measurement);
+
+        return ResponseEntity.ok(updatedMeasurement);
+    }
+
+    // 5. Endpoint para excluir uma medição (DELETE)
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Object> deleteMeasurement(@PathVariable Long id) {
+
+        Optional<GlucoseMeasurement> measurementOpt = measurementService.buscarPorId(id);
+        if (measurementOpt.isEmpty()) {
+            return ResponseEntity.badRequest().body("Medição não encontrada com o ID informado.");
+        }
+
+        measurementService.deletarMedicao(id);
+
+        return ResponseEntity.noContent().build();
+
     }
 }
