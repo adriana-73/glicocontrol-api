@@ -30,6 +30,7 @@ git clone https://github.com/adriana-73/glicocontrol-api.git
 
 
 2. *Aceder à pasta do projeto:*
+
  ```bash
 cd glicocontrol-api/backend
  ```
@@ -91,8 +92,8 @@ Este repositório segue as boas práticas de Conventional Commits:
 👩‍💻 Autora
 Desenvolvido por: * Adriana santos *  🚀
 
- 
- ```  
+
+ ```bash 
 * **GitHub:** [github.com/adriana-73](https://github.com/adriana-73)
 * **LinkedIn:** [Aceder ao LinkedIn](https://www.linkedin.com/in/adriana-selestrina)
  ```
