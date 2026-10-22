@@ -6,7 +6,8 @@ API RESTful em Java com Spring Boot para gestão e acompanhamento de controlo gl
 
 ## 📚 Documentação Funcional e Técnica
 Para consultar a especificação detalhada de produto, Histórias de Utilizador (User Stories BDD), diagramas de entidades e arquitetura, aceda ao documento completo:
-👉 [*Ver Documentação Funcional e Técnica*](docs/ESPECIFICACAO_TECNICA.md)
+
+[* Documentação Funcional e Técnica*](docs/ESPECIFICACAO_TECNICA.md)
 ---
 
 # 📋 Pré-requisitos
