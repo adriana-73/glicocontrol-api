@@ -22,7 +22,7 @@ Para consultar a especificação detalhada de produto, Histórias de Utilizador 
 # 🚀 Como Clonar e Executar o Projeto Localmente
 
 1. *Clonar o repositório:*
-   
+     
    ```bash
    
 git clone https://github.com/adriana-73/glicocontrol-api.git
@@ -30,6 +30,7 @@ git clone https://github.com/adriana-73/glicocontrol-api.git
 
 
 2. *Aceder à pasta do projeto:*
+
 
  ```bash
 cd glicocontrol-api/backend
@@ -93,7 +94,7 @@ Este repositório segue as boas práticas de Conventional Commits:
 Desenvolvido por: * Adriana santos *  🚀
 
 
- ```bash 
+
 * **GitHub:** [github.com/adriana-73](https://github.com/adriana-73)
 * **LinkedIn:** [Aceder ao LinkedIn](https://www.linkedin.com/in/adriana-selestrina)
  ```
