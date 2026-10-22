@@ -32,6 +32,7 @@ import java.util.List;
                 return ResponseEntity.badRequest().body("Erro de validação: " + result.getAllErrors());
             }
 
+
             User savedUser = userRepository.save(user);
             return ResponseEntity.status(201).body(savedUser);
         }

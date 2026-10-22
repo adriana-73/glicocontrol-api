@@ -46,6 +46,7 @@ public class UserService {
             user.setName(usuarioAtualizado.getName());
             user.setEmail(usuarioAtualizado.getEmail());
             // Atualize outros campos necessários aqui...
+            user.setMedications(usuarioAtualizado.getMedications());
             return userRepository.save(user);
         }).orElseThrow(() -> new RuntimeException("Usuário não encontrado com o ID: " + id));
     }
