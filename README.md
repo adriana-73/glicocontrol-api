@@ -4,10 +4,10 @@ API RESTful em Java com Spring Boot para gestão e acompanhamento de controlo gl
 
 ---
 
-## 📚 Documentação Funcional e Técnica
+# 📚 Documentação Funcional e Técnica
 Para consultar a especificação detalhada de produto, Histórias de Utilizador (User Stories BDD), diagramas de entidades e arquitetura, aceda ao documento completo:
 
-[* Documentação Funcional e Técnica*](docs/ESPECIFICACAO_TECNICA.md)
+# [Documentação Funcional e Técnica](docs/ESPECIFICACAO_TECNICA.md)
 ---
 
 # 📋 Pré-requisitos
@@ -90,11 +90,11 @@ Este repositório segue as boas práticas de Conventional Commits:
  
 👩‍💻 Autora
 Desenvolvido por: * Adriana santos *  🚀
- ```
-  
-* *GitHub:* [github.com/adriana-73](https://github.com/adriana-73)
-* *LinkedIn:* [Aceder ao LinkedIn](https://www.linkedin.com/in/adriana-selestrina)
 
+ 
+ ```  
+* **GitHub:** [github.com/adriana-73](https://github.com/adriana-73)
+* **LinkedIn:** [Aceder ao LinkedIn](https://www.linkedin.com/in/adriana-selestrina)
  ```
 
    
