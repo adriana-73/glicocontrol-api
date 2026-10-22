@@ -95,8 +95,8 @@ Desenvolvido por: * Adriana santos *  🚀
 
 
 
-* **GitHub:** [github.com/adriana-73](https://github.com/adriana-73)
-* **LinkedIn:** [Aceder ao LinkedIn](https://www.linkedin.com/in/adriana-selestrina)
- ```
+* *GitHub:** [github.com/adriana-73](https://github.com/adriana-73)
+* *LinkedIn:** [Aceder ao LinkedIn](https://www.linkedin.com/in/adriana-selestrina)
+
 
    
