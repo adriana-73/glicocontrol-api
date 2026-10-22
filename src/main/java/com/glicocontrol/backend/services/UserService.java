@@ -39,6 +39,25 @@ public class UserService {
         }
         return sb.toString().trim();
     }
+
+    // Método para atualizar
+    public User atualizar(Long id, User usuarioAtualizado) {
+        return userRepository.findById(id).map(user -> {
+            user.setName(usuarioAtualizado.getName());
+            user.setEmail(usuarioAtualizado.getEmail());
+            // Atualize outros campos necessários aqui...
+            return userRepository.save(user);
+        }).orElseThrow(() -> new RuntimeException("Usuário não encontrado com o ID: " + id));
+    }
+
+    // Método para deletar
+    public void deletar(Long id) {
+        if (userRepository.existsById(id)) {
+            userRepository.deleteById(id);
+        } else {
+            throw new RuntimeException("Usuário não encontrado com o ID: " + id);
+        }
+    }
 }
 
 

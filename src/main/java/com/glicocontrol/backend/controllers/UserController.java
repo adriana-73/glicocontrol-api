@@ -1,4 +1,5 @@
 package com.glicocontrol.backend.controllers;
+import com.glicocontrol.backend.services.UserService;
 import org.springframework.validation.BindingResult;
 
 import com.glicocontrol.backend.models.User;
@@ -17,9 +18,12 @@ import java.util.List;
 
         @Autowired
         private UserRepository userRepository;
+        @Autowired
+        private UserService userService;
+
 
         // Rota POST para cadastrar um novo usuário
-         // Adicione este import
+        // Adicione este import
 
         @PostMapping
         public ResponseEntity<?> createUser(@Valid @RequestBody User user, BindingResult result) {
@@ -37,6 +41,18 @@ import java.util.List;
         public ResponseEntity<List<User>> getAllUsers() {
             List<User> users = userRepository.findAll();
             return ResponseEntity.ok(users);
+        }
+
+        @PutMapping("/{id}")
+        public ResponseEntity<User> atualizar(@PathVariable Long id, @RequestBody User usuarioAtualizado) {
+            User usuario = userService.atualizar(id, usuarioAtualizado);
+            return ResponseEntity.ok(usuario);
+        }
+
+        @DeleteMapping("/{id}")
+        public ResponseEntity<Void> deletar(@PathVariable Long id) {
+            userService.deletar(id);
+            return ResponseEntity.noContent().build();
         }
     }
 
