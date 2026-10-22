@@ -4,7 +4,7 @@ API RESTful em Java com Spring Boot para gestão e acompanhamento de controlo gl
 
 ---
 
-## 📋 Pré-requisitos
+# 📋 Pré-requisitos
 
 * *Java Development Kit (JDK):* Versão 17 ou superior.
 * *Maven:* Para gestão de dependências e construção do projeto (inclui Wrapper ./mvnw).
@@ -13,29 +13,40 @@ API RESTful em Java com Spring Boot para gestão e acompanhamento de controlo gl
 
 ---
 
-## 🚀 Como Clonar e Executar o Projeto Localmente
+# 🚀 Como Clonar e Executar o Projeto Localmente
 
 1. *Clonar o repositório:*
+   
    ```bash
-   git clone https://github.com/adriana-73/glicocontrol-api.git
    
-   Aceder á pasta do projeto:
-   cd glicocontrol-api/backend
-   
-   Execultar a aplicação:
-   ./mvnw spring-boot:run
-   
-## A aplicação ficará disponível localmente em: ⁠http://localhost:8080
+git clone https://github.com/adriana-73/glicocontrol-api.git
+ ```
 
-## Infraestrutura e Deploy (Ambiente Compartilhado)
+
+2. *Aceder à pasta do projeto:*
+ ```bash
+cd glicocontrol-api/backend
+ ```
+
+
+3. *Executar a aplicação:*
+ ```bash
+./mvnw spring-boot:run
+ ```
+   
+# A aplicação ficará disponível localmente em: 
+⁠http://localhost:8080
+
+# Infraestrutura e Deploy (Ambiente Compartilhado)
  O projeto está configurado com Deploy Contínuo (CD):
  Repositório Central: GitHub (⁠adriana-73/glicocontrol-api⁠)
  Ambiente de Produção (Cloud): Hospedado no Render.
  Fluxo de Trabalho: Sempre que é feito um ⁠git push⁠ para a branch principal (⁠main⁠), 
  o Render deteta a atualização, executa o build automaticamente e atualiza a aplicação em tempo real.
-## 📌 Endpoints Principais: 
+ 
+# 📌 Endpoints Principais: 
 
-### 👤 Utilizadores (/api/users)
+# 👤 Utilizadores (/api/users)
 
 | Método | Endpoint | Descrição |
 | :--- | :--- | :--- |
@@ -46,7 +57,7 @@ API RESTful em Java com Spring Boot para gestão e acompanhamento de controlo gl
 | *DELETE* | /api/users/{id} | Remove um utilizador |
 
 *Exemplo de Corpo (Body JSON para POST/PUT):
-'''json
+ ```json
 {  
   "name": "Célia Santos",  
   "email": "celia01santos@hotmail.com",  
@@ -55,10 +66,10 @@ API RESTful em Java com Spring Boot para gestão e acompanhamento de controlo gl
   "height": 1.75,  
   "weight": 70.5,  
   "medications": "Insulina NPH"
-  '''
+  ```
 }
 
-### 🩺 Medições e Glicemia (/api/glucose / /api/measurements)
+# 🩺 Medições e Glicemia (/api/glucose / /api/measurements)
 
 | Método | Endpoint | Descrição |
 | :--- | :--- | :--- |
@@ -70,8 +81,11 @@ Este repositório segue as boas práticas de Conventional Commits:
  ⁠feat(user)⁠: Adição de novas funcionalidades.
  ⁠fix(user)⁠: Correções de erros ou mapeamento de campos.
  ⁠docs⁠: Atualizações na documentação (como o README)
+ 
 👩‍💻 Autora
 Desenvolvido por: Adriana 🚀
+ ```
 GitHub: https://github.com/adriana-73
+ ```
 
    
