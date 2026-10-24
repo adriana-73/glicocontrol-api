@@ -68,8 +68,8 @@ cd glicocontrol-api/backend
  ```json
 {  
   "name": "Célia Santos",  
-  "email": "celia01santos@hotmail.com",  
-  "password": "SuaSenhaAqui",  
+  "email": "******@hotmail.com",  
+  "password": "*******",  
   "age": 30,  
   "height": 1.75,  
   "weight": 70.5,  
